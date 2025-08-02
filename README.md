@@ -215,7 +215,26 @@ uvicorn main:app --reload           # Launch API server
 ```
 
 ---
+## Summary
 
+| **Component**            | **Implemented** | **Tool/Service Used**                     |
+| ------------------------ | --------------- | ----------------------------------------- |
+| **Data Versioning**      | ✅               | `DVC` with `AWS S3` remote                |
+| **Data Ingestion**       | ✅               | `pandas`, custom Python class             |
+| **Data Preprocessing**   | ✅               | `scikit-learn` Pipelines                  |
+| **Model Training**       | ✅               | `scikit-learn`, `GridSearchCV`            |
+| **Experiment Tracking**  | ✅               | `MLflow` (local server: `127.0.0.1:5000`) |
+| **Model Evaluation**     | ✅               | `classification_report`, ROC AUC          |
+| **Model Packaging**      | ✅               | `joblib` for serialization                |
+| **API Deployment**       | ✅               | `FastAPI` on `AWS EC2`                    |
+| **Web UI**               | ✅               | HTML + Bootstrap via Jinja2               |
+| **Containerization**     | ✅               | `Docker` (with `Dockerfile`)              |
+| **CI/CD Pipeline**       | ✅               | `GitHub Actions`                          |
+| **Cloud Hosting**        | ✅               | `AWS EC2`, SSH-based deployment           |
+| **Secrets Management**   | ✅               | `GitHub Secrets`                          |
+| **Testing**              | ✅               | `pytest`, CI-tested                       |
+
+---
 ## 🙌 Author
 
 * 👨‍💻 Katta Sai Pranav Reddy
