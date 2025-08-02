@@ -84,7 +84,7 @@ async def predict_api(data: CustomerData):
 
         return {
             "prediction": int(prediction),
-            "message": "Customer is likely to Churn" if prediction == 1 else "Customer is not likely to Churn",
+            "message": "Customer is likely to CHURN" if prediction == 1 else "Customer is not likely to CHURN",
             "probability": round(probability, 4)
         }
     except Exception as e:

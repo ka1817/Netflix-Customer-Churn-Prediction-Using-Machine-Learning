@@ -33,7 +33,7 @@ class DataIngestion:
         if self.df is None:
             logging.warning("No data loaded. Call load_data() first.")
             return
-        logging.info("Displaying DataFrame Info and Summary Stats:")
+        logging.info("Displaying DataFrame Infomation and Summary Stats:")
         print(self.df.info())
         print("\nSummary Statistics:")
         print(self.df.describe(include='all'))

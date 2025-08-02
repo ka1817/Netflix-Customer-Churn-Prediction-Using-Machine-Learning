@@ -89,5 +89,5 @@ jobs:
             docker rm netflix-churn || true
             docker rmi ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest || true
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            docker run -d --name netflix-churn -p 80:8000 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            docker run -d --name netflix-churn -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
           EOF

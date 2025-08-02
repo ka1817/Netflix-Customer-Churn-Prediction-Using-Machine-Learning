@@ -6,6 +6,7 @@ matplotlib
 mlflow
 fastapi
 pydentic
+
 uvicorn 
 python-multipart
 pytest

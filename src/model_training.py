@@ -101,7 +101,7 @@ def train_and_log_models():
         logging.info(f"{name} | Accuracy: {acc:.4f} | F1: {f1:.4f} | Recall: {recall:.4f} | Test ROC AUC: {auc_test:.4f} | CV ROC AUC: {auc_cv_mean:.4f}")
 
         if auc_test - auc_cv_mean > 0.02:  
-            logging.warning(f"⚠ {name} may be overfitting! Test AUC is significantly higher than CV AUC.")
+            logging.warning(f"⚠ {name} may be overfitting! Test AUC is significantly higher than Cross Validation AUC.")
 
         class_report = classification_report(y_test, y_pred)
         report_path = os.path.join(reports_dir, f"{name}_classification_report.txt")

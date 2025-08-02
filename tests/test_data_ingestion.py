@@ -13,4 +13,4 @@ def test_data_ingestion_columns():
     df = ingestion.load_data()
     expected_columns = ['age', 'watch_hours', 'last_login_days', 'churned']
     for col in expected_columns:
-        assert col in df.columns, f"{col} should exist in the DataFrame"
+        assert col in df.columns, f"{col} should exist in the dataframe"

@@ -30,7 +30,7 @@ class DataPreprocessor:
 
     def transform_and_save(self, df: pd.DataFrame, output_path: str = "data/netflix_customer_churn.csv") -> None:
         if self.pipeline is None:
-            raise ValueError("Pipeline is not built. Call build_pipeline() .")
+            raise ValueError("Pipeline is not built. Call build_pipeline() first.")
 
         X = df.drop(columns=[self.target_column])
         y = df[self.target_column].reset_index(drop=True)

@@ -28,4 +28,4 @@ def test_transform_output_shape(sample_df):
     preprocessor.build_pipeline()
     X = sample_df.drop(columns=['churned'])
     transformed = preprocessor.pipeline.fit_transform(X)
-    assert transformed.shape[0] == sample_df.shape[0], "Rows should remain same after transforming"
+    assert transformed.shape[0] == sample_df.shape[0], "Rows should remain same after transform"

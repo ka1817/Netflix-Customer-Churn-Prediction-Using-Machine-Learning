@@ -7,7 +7,6 @@ venv/
 .env/
 reports/
 notebook/
-
 .DS_Store
 Thumbs.db
 
