@@ -6,7 +6,6 @@ import mlflow.sklearn
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier

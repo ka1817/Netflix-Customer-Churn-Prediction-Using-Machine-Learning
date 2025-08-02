@@ -18,4 +18,4 @@ def test_model_prediction():
     }])
 
     pred = model.predict(input_data)
-    assert pred[0] in [0, 1], "Prediction should be 0 or 1"
+    assert pred[0] in [0, 1], "Prediction should be 1 or 0"
