@@ -24,11 +24,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
+          pip install pytest dvc[s3]
+
+      - name: Configure AWS Credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region us-east-1
+
+      - name: Pull data from DVC remote
+        run: |
+          dvc pull -r myremote
 
       - name: Run Tests
         run: pytest tests/ --maxfail=1 --disable-warnings -q
@@ -72,16 +82,9 @@ jobs:
       - name: Deploy App on EC2
         run: |
           ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
-            # Stop and remove existing container if running
             docker stop netflix-churn || true
             docker rm netflix-churn || true
-            
-            # Remove old image
             docker rmi ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest || true
-            
-            # Pull new image from DockerHub
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            
-            # Run container
             docker run -d --name netflix-churn -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
           EOF
