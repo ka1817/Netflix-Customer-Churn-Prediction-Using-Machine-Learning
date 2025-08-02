@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/573100221068461992
+creation_time: 1754109046036
+experiment_id: '573100221068461992'
+last_update_time: 1754109046036
+lifecycle_stage: active
+name: Netflix Churn Prediction

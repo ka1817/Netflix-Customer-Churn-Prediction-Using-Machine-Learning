@@ -4,3 +4,8 @@ scikit-learn
 seaborn 
 matplotlib
 mlflow
+fastapi
+pydentic
+uvicorn 
+python-multipart
+pytest

@@ -1,0 +1,14 @@
+Model: RandomForest
+
+Best Parameters:
+{'classifier__max_depth': None, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 200}
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99       497
+           1       0.99      0.99      0.99       503
+
+    accuracy                           0.99      1000
+   macro avg       0.99      0.99      0.99      1000
+weighted avg       0.99      0.99      0.99      1000

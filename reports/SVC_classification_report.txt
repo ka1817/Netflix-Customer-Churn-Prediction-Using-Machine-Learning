@@ -1,0 +1,18 @@
+Model: SVC
+
+Best Parameters:
+{'classifier__C': 1, 'classifier__gamma': 'scale', 'classifier__kernel': 'rbf'}
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.92      0.93       497
+           1       0.92      0.94      0.93       503
+
+    accuracy                           0.93      1000
+   macro avg       0.93      0.93      0.93      1000
+weighted avg       0.93      0.93      0.93      1000
+
+
+Cross-Validation AUC: 0.9822
+Test AUC: 0.9844

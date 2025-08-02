@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/573100221068461992/b05da26c8c2743ddacbef091f4686840/artifacts
+end_time: 1754109092299
+entry_point_name: ''
+experiment_id: '573100221068461992'
+lifecycle_stage: active
+run_id: b05da26c8c2743ddacbef091f4686840
+run_name: GradientBoosting
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754109087217
+status: 3
+tags: []
+user_id: saipr

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/573100221068461992/3171096183d74ec5b597dec8c412e775/artifacts
+end_time: 1754109424930
+entry_point_name: ''
+experiment_id: '573100221068461992'
+lifecycle_stage: active
+run_id: 3171096183d74ec5b597dec8c412e775
+run_name: SVC
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754109419878
+status: 3
+tags: []
+user_id: saipr

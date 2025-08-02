@@ -1,0 +1,18 @@
+Model: GradientBoosting
+
+Best Parameters:
+{'classifier__learning_rate': 0.1, 'classifier__max_depth': 3, 'classifier__n_estimators': 200}
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99       497
+           1       1.00      0.99      0.99       503
+
+    accuracy                           0.99      1000
+   macro avg       0.99      0.99      0.99      1000
+weighted avg       0.99      0.99      0.99      1000
+
+
+Cross-Validation AUC: 0.9991
+Test AUC: 0.9989
