@@ -61,7 +61,7 @@ async def predict_form(request: Request,
         prediction = model.predict(input_data)[0]
         probability = model.predict_proba(input_data)[0][1]
 
-        result_text = f"Customer is {'likely to churn' if prediction == 1 else 'not likely to churn'}"
+        result_text = f"Customer is {'likely to Churn' if prediction == 1 else 'not likely to Churn'}"
 
         return templates.TemplateResponse("index.html", {
             "request": request,
